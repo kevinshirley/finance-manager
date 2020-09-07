@@ -1,25 +1,27 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 import { Avatar, Badge } from 'react-native-elements';
 import { Ionicons } from '@expo/vector-icons';
 
-export default function Header() {
+export default function HeaderOverview() {
   return (
-    <View style={styles.container}>
-      <View style={styles.headerOverview}>
-        <View style={styles.headerOverviewAvailableBalance}>
-          <Text style={styles.headerOverviewAvailableBalanceAmount}>$22,589.76</Text>
-          <Text style={styles.headerOverviewAvailableBalanceText}>Available Balance</Text>
-        </View>
-        <View style={styles.headerOverviewProfileDetails}>
+    <View style={styles.headerOverview}>
+      <View style={styles.headerOverviewAvailableBalance}>
+        <Text style={styles.headerOverviewAvailableBalanceAmount}>$22,589.74</Text>
+        <Text style={styles.headerOverviewAvailableBalanceText}>Available Balance</Text>
+      </View>
+      <View style={styles.headerOverviewProfileDetails}>
+        <TouchableOpacity onPress={()=>{}}>
           <View>
             <Ionicons name='ios-notifications' size={33} color='#fff' />
             <Badge
               status='error'
               containerStyle={{ position: 'absolute', top: -6, right: -7 }}
-              value={2}
+              value={4}
             />
           </View>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={()=>{}}>
           <View>
             <Avatar
               rounded
@@ -30,22 +32,13 @@ export default function Header() {
               avatarStyle={styles.headerOverviewProfileAvatar}
             />
           </View>
-        </View>
+        </TouchableOpacity>
       </View>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    alignItems: 'center',
-    marginTop: 60,
-    paddingLeft: 30,
-    paddingRight: 30,
-    flexDirection: 'column',
-    alignSelf: 'stretch',
-    justifyContent: 'center',
-  },
   headerOverview: {
     alignSelf: 'stretch',
     flexDirection: 'row',

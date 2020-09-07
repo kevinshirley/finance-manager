@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, ScrollView, Text } from 'react-native';
 import { APP_CONTAINER } from './src/styles/styles-variables';
 import Home from './src/components/home';
-import Header from './src/components/common/header';
+import Header from './src/components/header';
 
 export default function App() {
   return (
