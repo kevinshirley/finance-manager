@@ -13,3 +13,7 @@ export const PANEL = {
 export const PANEL_HEADER_TEXT = {
   COLOR: BLUE_900,
 };
+
+export const HEADER_CTA_ICON = {
+  COLOR: BLUE_800,
+};
