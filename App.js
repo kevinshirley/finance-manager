@@ -1,21 +1,21 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, ScrollView, Text } from 'react-native';
+import { APP_CONTAINER } from './src/styles/styles-variables';
+import Home from './src/components/home';
+import Header from './src/components/common/header';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Finance Manager!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <ScrollView contentContainerStyle={styles.container}>
+      <Header />
+      <Home />
+    </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
+    backgroundColor: APP_CONTAINER.BACKGROUND_COLOR,
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
   },
 });
