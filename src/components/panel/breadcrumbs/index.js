@@ -29,6 +29,7 @@ export default function PanelBreadcrumbs() {
 const styles = StyleSheet.create({
   container: {
     marginTop: 15,
+    marginBottom: 30,
     flexDirection: 'row',
   },
   breadcrumb: {
